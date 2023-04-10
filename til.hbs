@@ -1,0 +1,17 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{#page}}
+    {{> "header"}}
+
+    <main class="sm-header-grid sm-post-content sm-archive-header {{post_class}} {{slug}}" id="sm-main">
+        {{content}}
+    </main>
+{{/page}}
+
+<section class="sm-header-grid sm-archive-grid">
+    {{#foreach posts}}
+        {{> "archive-card"}}
+    {{/foreach}}
+</section>
